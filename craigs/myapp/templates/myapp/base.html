@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+  <title>Craigs</title>
+
+</head>
+
+<body>
+
+  <nav  class=" navbar navbar-expand-lg navbar-light bg-danger">
+    <a class="navbar-brand" href="{% url 'basic' %}" style="color: white;font-family: 'Pacifico', cursive;">CraigsDaddy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="{% url 'home' %}" style="color: white;font-family: 'Pacifico', cursive;">Home <span class="sr-only">(current)</span></a>
+
+      </div>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <h1 style="text-align: center">What do you want to search for on Codedaddies List?</h1>
+    <br>
+    <div class="card-deck">
+      <div class="card">
+        <img
+          src="data:image/png;base64,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"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fast craigslist web scraper</h5>
+          <p class="card-text">Scrape away right here with a beautiful GUI.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn0.iconfinder.com/data/icons/business-line-icon-two/100/ALL-55-512.png" class="card-img-top"
+          style="width: 348px; height: 139.19px;">
+        <div class="card-body">
+          <h5 class="card-title">Filter your searches</h5>
+          <p class="card-text">We built in functionality to filter based on pricing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png"
+          class="card-img-top" style="width: 348px; height: 139.19px;">
+        <div class="card-body">
+          <h5 class="card-title">A much sexier front-end to Craigslist</h5>
+          <p class="card-text">We built this with ❤️</p>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <form method="post" action="{% url 'new_search' %}">
+      {% csrf_token %}
+      <div class="form-group">
+
+        <input type="text" class="form-control" name="search" placeholder="search">
+
+      </div>
+
+      <button type="submit" class="btn btn-danger">Search</button>
+    </form>
+
+ 
+{% block content %}
+
+{% endblock content %}
+<div class="container"> 
+  <hr>
+  <footer style="text-align: center;" class="text-muted">
+      <p>&#169; Copyright 2020 CraigsDaddy</p> 
+      
+      
+  </footer>
+  </div> 
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

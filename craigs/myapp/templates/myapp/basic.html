@@ -1,0 +1,156 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Craigs</title>
+
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("https://images.unsplash.com/photo-1566833345342-e804f8f97ccc?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1600");
+
+
+            height: 500px;
+
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+        .card {
+            opacity: 0.5;
+        }
+
+        .card:hover {
+            opacity: 1.0;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand" href="{% url 'basic' %}"
+            style="color: white; font-family: 'Pacifico', cursive;">CraigsDaddy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="{% url 'home' %}"
+                    style="color: white;font-family: 'Pacifico', cursive;">Home <span
+                        class="sr-only">(current)</span></a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Container element -->
+    <div class="parallax"></div>
+    <br>
+    <div class="container" style="text-align: center;">
+        <h1>Browse specific category</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, recusandae perspiciatis. Modi alias
+            sapiente
+            aut officiis eos libero vitae, ipsa tenetur </p>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1524679813234-66a389fe1a42?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=300"
+                        class="card-img-top" alt="...">
+                    <div class="bottom-left" style="color: white;">
+                        <h2>Items For Sale</h2>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=300"
+                        class="card-img-top" alt="...">
+                    <div class="bottom-left" style="color: white;">
+                        <h2>Community</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1568802969491-3d6c5def14de?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=300"
+                        class="card-img-top" alt="...">
+                    <div class="bottom-left" style="color: white;">
+                        <h2>For Rent</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1504211910536-32e00cbd7cbf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=300"
+                        class="card-img-top" alt="...">
+                    <div class="bottom-left" style="color: white;">
+                        <h2>Jobs</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Buy & sell online locally or nationally</h2>
+        <p>Search the item you're looking for, here on CraigsDaddy</p>
+        <a href="{% url 'home' %}"><button class="btn btn-danger">Visit</button></a>
+        <hr>
+        <div class="jumbotron"
+            style="background-image: url(data:image/jpeg;base64,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); background-size: 100%;">
+            <h1 class="display-4">Now with much sexier frontend!</h1>
+            <p class="lead">Search for the apartments,items on sale, and much more in a reasonable discount..</p>
+            <hr class="my-4">
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempora temporibus aspernatur
+                repellat ea nostrum nam illum non quam! Sapiente quia dolorem quis ducimus unde molestias vel in
+                assumenda suscipit.</p>
+
+        </div>
+        <hr>
+<h2>Receive the best offers</h2>
+<p>Stay in touch with CraigsDaddy and we'll notify you about best offers!</p>
+</div>
+<div class="container" style="background-color: whitesmoke; padding-bottom: 20px;">
+<form >
+    <div class="form-group">
+      <label for="exampleInputEmail1" style="padding-top: 20px;">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </form>
+  
+</div> 
+<div class="container"> 
+<hr>
+<footer style="text-align: center;" class="text-muted">
+    <p>&#169; Copyright 2020 CraigsDaddy</p> 
+    
+    
+</footer>
+</div> 

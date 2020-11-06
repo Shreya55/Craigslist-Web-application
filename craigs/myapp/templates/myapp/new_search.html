@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<h2 style="text-align: center">{{ search | title }}</h2>
+<!--search|title forces normal text pythON TUtoR -> python Tutor-->
+
+<div class="row mb-3">
+    {% for post in final_postings %}
+    <div class="col-sm-3 mb-3 mt-3">
+        <div class="card">
+            <a href="{{ post.1 }}"><img src="{{ post.3 }}" class="card-img-top"></a>
+            <div class="card-body">
+                <p class="card-text">{{ post.0 }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ post.1 }}">View listing: Price {{ post.2 }}</a>
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
