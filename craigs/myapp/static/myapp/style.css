@@ -1,10 +1,10 @@
 .card {
-    height: 400px; /* Your height here */
+    height: 400px; 
     overflow: hidden;
 }
 
 .card-image {
-    height: 250px; /* Your height here */
+    height: 250px; 
     overflow: hidden;
 }
 
